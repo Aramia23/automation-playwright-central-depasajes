@@ -26,4 +26,5 @@ jobs:
         uses: actions/upload-artifact@master
         with:
           name: reporte
-          path: playwright-report.
+          path: playwright-report/
+          retention-days: 30
