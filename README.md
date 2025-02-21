@@ -77,13 +77,13 @@ Tratar de mantener lo mas organizado posible los test y toda la data que se util
 Utiliza fixtures para preparar estados comunes y datos de prueba, de forma que cada test pueda arrancar en un estado controlado. Esto ayuda a mantener la consistencia y a reducir dependencias entre pruebas. Además de implementar mocks para el front cuando los test requieran llamadas al BE que tengan mucho consumo.
 
 3. Ejecución paralela y segmentación:
-Configura la ejecución en paralelo (usando la opción workers en Playwright) y considera segmentar los tests en distintos grupos o pipelines (por ejemplo, smoke, regresión, pruebas críticas) para optimizar tiempos y aislar problemas. Se puede aplicar el uso de los tags por test.
+Configurar la ejecución en paralelo (usando la opción workers en Playwright) y considera segmentar los tests en distintos grupos o pipelines (por ejemplo, smoke, regresión, pruebas críticas) para optimizar tiempos y aislar problemas. Se puede aplicar el uso de los tags por test.
 
 4. Reportes y análisis de resultados:
-Con una suite grande es fundamental tener buenos reportes y registros (logs, screenshots, videos) para detectar rápidamente fallos y tendencias. Asegúrate de integrar herramientas que faciliten el análisis.
+Con una suite grande es fundamental tener buenos reportes y registros (logs, screenshots, videos) para detectar rápidamente fallos y tendencias.
 
 5. Mantenimiento y limpieza:
-Revisa periódicamente la suite para eliminar tests obsoletos, refactorizar duplicaciones y asegurar que cada test tiene un propósito claro.
+Revisar periódicamente la suite para eliminar tests obsoletos, refactorizar duplicaciones y asegurar que cada test tiene un propósito claro.
 
 
 ## Si hay flakiness en un test, ¿cómo lo manejarías?
