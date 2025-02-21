@@ -21,3 +21,8 @@ jobs:
 
       - name: Integration Tests
         run: npm run test
+
+      - uses: actions/upload-artifact@master
+          with:
+            name: reporte
+            path: playwright-report
