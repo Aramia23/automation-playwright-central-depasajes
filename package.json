@@ -1,0 +1,26 @@
+{
+  "name": "automation-playwright-central-depasajes",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test:ui": "npx playwright test --config=playwright.config.ts --grep=web",
+    "test:api": "npx playwright test --config=playwright.config.ts --grep=backend",
+    "test": "npx playwright test --config=playwright.config.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@eslint/js": "^9.20.0",
+    "@playwright/test": "^1.50.1",
+    "@types/node": "^22.13.4",
+    "eslint": "^9.20.1",
+    "prettier": "3.5.1",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.24.1"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7"
+  }
+}
