@@ -7,22 +7,24 @@ on:
 
 jobs:
   nightly_build:
-    # The type of runner that the job will run on
+
     runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
+
     steps:
-    # Runs a single command using the runners shell
-        - name: Checkout
-          uses: actions/checkout@v4.2.2
+      - name: Checkout
+        uses: actions/checkout@v4.2.2
 
-        - name: Node
-          run: npm install
-      
-        - name: Integration Tests
-          run: npm run test-chrome
+      - name: Setup Node and Install Dependencies
+        run: |
+          npm install
+          npx playwright install-deps
+          npx playwright install
 
-        - uses: actions/upload-artifact@master
+      - name: Integration Tests
+        run: npm run test
+
+      - uses: actions/upload-artifact@master
           with:
             name: reporte
             path: playwright-report

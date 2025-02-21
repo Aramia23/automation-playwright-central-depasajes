@@ -5,7 +5,7 @@
   "scripts": {
     "test:ui": "npx playwright test --config=playwright.config.ts --grep=web",
     "test:api": "npx playwright test --config=playwright.config.ts --grep=backend",
-    "test": "npx playwright test --config=playwright.config.ts"
+    "test": "npx playwright test --config=playwright.config.ts --workers=4"
   },
   "keywords": [],
   "author": "",
