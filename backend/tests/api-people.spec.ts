@@ -2,6 +2,7 @@ import { test, expect } from "@playwright/test";
 import { getServerTiming } from "../../utils/server-timing";
 import {data, schema} from "../fixtures/people";
 import Ajv from 'ajv';
+import fs from 'fs';
 
 
 const ajv = new Ajv();
@@ -20,6 +21,9 @@ test.describe("Se verifica uso de endpoint people", () => {
     expect(responseBody.message).toEqual(data.message_ok);
     expect(responseBody.result.properties).toBeTruthy();
     expect(serverTiming).toBeLessThan(2); //Expresado en segundos
+
+   // Se escribe el JSON a un archivo en el directorio actual
+  fs.writeFileSync('backend-responses/response-api-people.json', JSON.stringify(responseBody, null, 2));
   });
 
   test("GETObtener todos los usuarios de people", async ({ page }) => {
