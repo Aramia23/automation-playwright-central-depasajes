@@ -1,0 +1,24 @@
+{
+  "message": "ok",
+  "result": {
+    "properties": {
+      "created": "2025-02-21T19:07:19.570Z",
+      "edited": "2025-02-21T19:07:19.570Z",
+      "climate": "temperate, tropical",
+      "surface_water": "8",
+      "name": "Yavin IV",
+      "diameter": "10200",
+      "rotation_period": "24",
+      "terrain": "jungle, rainforests",
+      "gravity": "1 standard",
+      "orbital_period": "4818",
+      "population": "1000",
+      "url": "https://www.swapi.tech/api/planets/3"
+    },
+    "_id": "5f7254c11b7dfa00041c6fb0",
+    "description": "A planet.",
+    "uid": "3",
+    "__v": 0
+  },
+  "feelTheForce": "https://www.sabermasters.com/discount/RYAN47680"
+}
