@@ -2,6 +2,7 @@ import { test, expect } from "@playwright/test";
 import { getServerTiming } from "../../utils/server-timing";
 import {data, schema} from "../fixtures/films";
 import Ajv from 'ajv';
+import fs from 'fs';
 
 const ajv = new Ajv();
 const validate = ajv.compile(schema);
@@ -20,6 +21,9 @@ test.describe("Se verifica uso de endpoint films", () => {
     expect(responseBody.message).toEqual(data.message_ok);
     expect(responseBody.result.properties).toBeTruthy();
     expect(serverTiming).toBeLessThan(2); //Expresado en segundos
+
+  // Se escribe el JSON a un archivo en el directorio actual
+  fs.writeFileSync('backend-responses/response-api-film.json', JSON.stringify(responseBody, null, 2));
   });
 
   test("GET Obtener todos los films", async ({ page }) => {

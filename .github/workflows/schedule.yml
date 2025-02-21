@@ -1,9 +1,8 @@
-name: afternoo build at 3pm ARG
+name: Afternoon Build at 3pm ARG on Mondays
 
 on:
   schedule:
     - cron: '0 18 * * 1'
-
 
 jobs:
   afternoon_build:
@@ -26,5 +25,8 @@ jobs:
 
       - uses: actions/upload-artifact@master
         with:
-            name: reporte
-            path: playwright-report
+          name: combined-artifacts
+          path: |
+            playwright-report
+            backend-responses
+          retention-days: 30

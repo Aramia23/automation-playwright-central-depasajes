@@ -25,6 +25,8 @@ jobs:
       - name: Upload Report
         uses: actions/upload-artifact@master
         with:
-          name: reporte
-          path: playwright-report/
+          name: combined-artifacts
+          path: |
+            playwright-report
+            backend-responses
           retention-days: 30
