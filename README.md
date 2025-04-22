@@ -17,7 +17,7 @@ Este repositorio contiene pruebas automatizadas implementadas con [Playwright](h
 
 1. Clona el repositorio:
    ```bash
-https://github.com/Aramia23/automation-playwright-central-depasajes
+   https://github.com/Aramia23/automation-playwright-central-depasajes
 
 2. Instala las dependencias:
    ```bash
