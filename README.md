@@ -12,26 +12,17 @@ Este repositorio contiene pruebas automatizadas implementadas con [Playwright](h
 - **Reportes de Ejecución:** Generación de reportes para facilitar el análisis de resultados.
 - **Paralelización:** Configuración de workers para ejecución en paralelo.
 
-## Requisitos
-
-- [Node.js](https://nodejs.org/) (versión LTS recomendada)
-- npm (o yarn)
 
 ## Instalación
 
 1. Clona el repositorio:
    ```bash
-   git clone https://github.com/tu_usuario/tu_repositorio.git
-   cd tu_repositorio
+https://github.com/Aramia23/automation-playwright-central-depasajes
 
 2. Instala las dependencias:
    ```bash
    npm install
 
-4. Instala las dependencias necesarias para ejecutar los navegadores (especialmente en Linux):
-      ```bash
-   npx playwright install-deps
-   npx playwright install
 
 ## Ejecución de Pruebas
 Para ejecutar todas las pruebas localmente, utiliza:
