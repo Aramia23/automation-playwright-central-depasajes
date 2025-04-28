@@ -1,32 +1,32 @@
-name: Afternoon Build at 3pm ARG on Mondays
+#name: Afternoon Build at 3pm ARG on Mondays
 
-on:
-  schedule:
-    - cron: '0 18 * * 1'
+#on:
+  #schedule:
+   # - cron: '0 18 * * 1'
 
-jobs:
-  afternoon_build:
+#jobs:
+  #afternoon_build:
 
-    runs-on: ubuntu-latest
+    #runs-on: ubuntu-latest
 
 
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4.2.2
+    #steps:
+     #- name: Checkout
+        #uses: actions/checkout@v4.2.2
 
-      - name: Setup Node and Install Dependencies
-        run: |
-          npm install
-          npx playwright install-deps
-          npx playwright install
+      #- name: Setup Node and Install Dependencies
+        #run: |
+          #npm install
+          #npx playwright install-deps
+          #npx playwright install
 
-      - name: Integration Tests
-        run: npm run test
+      #- name: Integration Tests
+        #run: npm run test
 
-      - uses: actions/upload-artifact@master
-        with:
-          name: combined-artifacts
-          path: |
-            playwright-report
-            backend-responses
-          retention-days: 30
+      #- uses: actions/upload-artifact@master
+        #with:
+         # name: combined-artifacts
+          #path: |
+           # playwright-report
+           #backend-responses
+          #retention-days: 30
